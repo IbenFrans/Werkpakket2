@@ -1,0 +1,102 @@
+@use 'base' as *;
+
+.backButton{
+    font-size: $font-lg;
+    margin: 2rem 0 0 3rem;
+}
+
+.headerCenter{
+    text-align: center;
+    @include flex-column(center);
+    margin: 3rem 0;
+    cursor: default;
+    h1{
+        @include pacificoFont(100);
+        margin-bottom: 1rem;
+        
+        @include tabletResponsive{
+            font-size: 75;
+        }
+    }
+    p{
+        @include josefinFont(20);
+    }
+}
+
+.productCard{
+    @include margin-padding(1rem);
+    text-align: center;
+
+    img{
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        background-color: $grey;
+    }
+
+    h3{
+        color: $white;
+        background-color: $darkgrey;
+        display: block;
+        width: 100%;
+        padding: 1rem;
+    }
+    .productCardDescription{
+        padding: 3rem 2rem;
+        background-color: #42424275;
+        border-radius: 10px;
+        display: block;
+        position: absolute;
+        opacity: 0;
+        font-weight: bolder;
+        
+        p{
+            color: $white;
+        }
+        .productCardPrice{
+            font-size: 30px;
+        }
+    }
+
+    &:hover{
+        cursor: pointer;
+
+        div{
+            overflow: hidden;
+        }
+        img{
+            filter: blur(8px);
+            -webkit-filter: blur(8px);
+            overflow: hidden;
+            @include transitionAll();
+        }
+        h3{
+            @include hover();
+        }
+        .productCardDescription{
+            opacity: 100;
+            @include transitionAll();
+        }
+    }
+}
+
+button{
+    @include margin-padding(1rem);
+    font-size: $font-md;
+    background-color: $white;
+    border: none;
+    border-radius: 10px;
+
+    &:hover{
+        @include hover();
+    }
+}
+
+.tags{
+    cursor: default;
+    background-color: $cyan;
+    display: inline-block;
+    @include margin-padding(0.5rem);
+    color: $white;
+    border-radius: 10px;
+}
