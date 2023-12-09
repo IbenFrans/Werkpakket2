@@ -8,7 +8,7 @@ nav{
     p a{
         font-family: 'Pacifico', cursive;
         color: $white;
-        font-size: $font-lg;
+        font-size: 24px;
         padding: 1.2rem 2rem;
         &:hover{
             @include hover();

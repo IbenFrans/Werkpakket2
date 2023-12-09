@@ -13,10 +13,10 @@ export default {
 </script>
 <template lang="">
     <nav>
-        <router-link  :to="homeNav.path">Shneaky Shop</router-link>
+        <p><router-link  :to="homeNav.path">Shneaky Shop</router-link></p>
     <ul>
         <li v-for="navItem in navItems">
-        <router-link :to="navItem.path"/></li>
+        <router-link :to="navItem.path">{{  navItem.name }}</router-link></li>
     </ul>
     </nav>
 </template>
