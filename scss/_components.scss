@@ -12,6 +12,7 @@
     cursor: default;
     h1{
         @include pacificoFont(100);
+        font-size: 100;
         margin-bottom: 1rem;
         
         @include tabletResponsive{

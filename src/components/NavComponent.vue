@@ -4,7 +4,7 @@ export default {
         return{
             homeNav: {path: "/", name: "Home"},
             navItems: [
-            {path: "/Product", name: "Product"},
+            {path: "/Products", name: "Products"},
             {path: "/Login", name: "Login"},
             {path: "/Cart", name: "Cart"}
         ]}
