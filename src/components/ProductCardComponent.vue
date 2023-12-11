@@ -1,8 +1,16 @@
 <script>
+    import { useProductsStore } from '@/stores/products.js'
+    
+
     export default {
-        props: {
-            product: Object
+        data(){
+            return{
+                productsPinia: useProductsStore()
+            }
         }
+        // props: {
+        //     product: Object
+        // }
     }
 </script>
 
