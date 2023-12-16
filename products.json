@@ -1,5 +1,4 @@
-{
-    "products": [
+[
       {
         "id": 1,
         "title": "Kirby with knife",
@@ -145,4 +144,3 @@
         ]
       }
     ]
-  }

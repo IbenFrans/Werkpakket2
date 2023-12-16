@@ -1,26 +1,50 @@
 <script>
 export default {
-    
+    data(){
+        return{
+        productPage: {path:"/Products", name: "Back"},
+        product: {
+            id: 1,
+            titel: "Kirby with knife",
+            description: "Cute but deadly",
+            longDescription: "This absolute gorgeous round pink blob has some murderous tendencies.<br>He may be cute but he'll cut you up like fish.\<br>He came to kill people and chew bubblegum and he's all out of bubblegum.<br><br>This piece was made in Illustrator",
+            image: "src/assets/kirby.png",
+            altImage: "Art kirby with knife",
+            price: 75.99,
+            btw: 5,
+            stock: 50,
+            tags: [
+                "cute",
+                "deadly",
+                "digital"
+            ]
+        },
+        }
+    },
+    methods: {
+        goToProducts(){
+            this.$router.push("Products")
+        }
+    }
 }
 </script>
 <template lang="">
     <main>
-        <button class="backButton"><a href="products.html">&lt; back</a></button>
+        <button class="backButton" @click="goToProducts">&lt; Back</button>
+        <!-- <button class="backButton"><a href="products.html">&lt; back</a></button> -->
         <div class="product">
-            <img src="./assets/kirby.png" alt="kirby with knife"/>
+            <img :src="product.image" :alt="product.altImage"/>
             <div class="productDetails">
                 <div class="productDescription">
-                    <h1>Kirby with knife</h1>
-                    <p>Cute but deadly</p>
-                    <p>This absolute gorgeous round pink blob has some murderous tendancies.<br>He may be cute but he'll cut you up like fish.<br>He came to kill people and chew bubblegum and he's all out of bubble gum.<br><br>This piece was made in Illustrator</p>
+                    <h1>{{ product.titel }}</h1>
+                    <p>{{ product.description }}</p>
+                    <p>{{ product.longDescription }}</p>
                     <ul>
-                        <li class="tags">Digital</li>
-                        <li class="tags">Cute</li>
-                        <li class="tags">Deadly</li>
+                        <li class="tags" v-for="tag in product.tags">{{ tag}} </li>
                     </ul>
                 </div>
                 <div class="productPrijsCart">
-                    <p id="prijs">€50</p>
+                    <p id="prijs">€ {{ product.price}}</p>
                     <button>
                         <svg id="Laag_2" data-name="Laag 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 209.28 180.62">
                         <g id="Laag_1-2" data-name="Laag 1">

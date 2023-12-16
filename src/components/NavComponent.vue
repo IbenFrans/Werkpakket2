@@ -2,7 +2,7 @@
 export default {
     data(){
         return{
-            homeNav: {path: "/", name: "Home"},
+            homeNav: {path: "/", name: "Home", title: ""},
             navItems: [
             {path: "/Products", name: "Products"},
             {path: "/Login", name: "Login"},
