@@ -2,7 +2,6 @@
 import HeaderComponent from '@/components/HeaderComponent.vue';
 import CartComponent from '@/components/CartComponent.vue';
 import { useUsersStore } from '@/stores/users';
-import { useProductsStore } from '@/stores/products';
 
 export default {
     data(){
@@ -10,7 +9,6 @@ export default {
             headerText: "Shopping Cart",
             headerSubText: "All your goodies are here!",
             userStore: useUsersStore(),
-            productStore: useProductsStore()
         }
     },
     components:{
@@ -21,6 +19,15 @@ export default {
         currentUser(){
             return this.userStore.loggedIn
         },
+        getShoppingCart(){
+            return this.userStore.shoppingCart
+        },
+        getTotalPrice(){
+            return this.userStore.totalPrice
+        },
+        getTotalBtw(){
+            return this.userStore.totalBtw
+        }
         
     }
 }
@@ -28,11 +35,12 @@ export default {
 <template lang="">
     <HeaderComponent :title="headerText" :subtext="headerSubText"/>
     <div class="shoppingCart">
-        <CartComponent v-for="item in userStore.shoppingCart" 
+        <CartComponent v-for="item in this.getShoppingCart" 
         v-bind:id="item.id"
         v-bind:item="item">
     </CartComponent>
-
+    <p>Totaalprijs: € {{ getTotalPrice }}</p>
+    <p>Totaalprijs (inc Btw): € {{ getTotalBtw }}</p>
     </div>
 </template>
 

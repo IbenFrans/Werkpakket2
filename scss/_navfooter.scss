@@ -13,8 +13,11 @@ nav{
         &:hover{
             @include hover();
         }
+        
     }
-
+    .router-link-active{
+        @include hover();
+    }
     ul{
         
         @include flex-row(center);

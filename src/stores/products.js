@@ -3,7 +3,8 @@ import productsJson from '/src/data/products.json'
 
 export const useProductsStore = defineStore('products',{
     state: () => ({
-        products: productsJson
+        products: productsJson,
+        selectedProduct: 0
     }),
     getters:{
       popularProducts(){

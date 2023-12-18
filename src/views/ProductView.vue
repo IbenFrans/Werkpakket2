@@ -56,7 +56,8 @@ export default {
             this.currentPage = 1;
         },
         goToDetailPage(id){
-            this.$router.push({name: 'ProductDetail', params: { id }});
+            this.store.selectedProduct = id;
+            this.$router.push('ProductDetail');
         }
     }
     

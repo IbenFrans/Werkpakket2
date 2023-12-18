@@ -4,21 +4,50 @@ import usersJson from '/src/data/users.json'
 export const useUsersStore = defineStore('users',{
     state: () => ({
        users: usersJson,
-       loggedIn: {}
+    //    loggedIn: ""
     }),
     getters:{
         shoppingCart(){
             return this.loggedIn.cart;
+        },
+        // Testing login
+        loggedIn(){
+            return this.users[0]
+        },
+        totalPrice(){
+            let totaal = 0
+            this.shoppingCart.forEach(item => {
+                let totaalItem = item.amount * item.price
+                totaal += totaalItem
+            });
+            return totaal
+        },
+        totalBtw(){
+            return this.totalPrice + this.totalPrice * 0.21
         }
     },
     actions:{
-        changeItemAmount(id, amount){
-            this.loggedIn.cart.find(item => item.id === id).amount = amount;
+        findItem(id){
+            return this.loggedIn.cart.find(item => item.id == id)
+        },
+        changeItemAmount(item, amount){
+            this.findItem(item.id).amount = amount;
+        },
+        addItem(product){
+            let productInCart = this.findItem(product.id)
+            if (productInCart){
+                this.findItem(product.id).amount += 1
+            } else{
+                product.amount = 1
+                this.loggedIn.cart.push(product)
+            }
+            
         },
         removeItem(id){
-            this.loggedIn.cart.splice(id, 1);
+            let index = this.findItem(id);
+            this.loggedIn.cart.splice(index, 1);
             console.log(this.loggedIn.cart)
-        }
+        },
     }
 
 })

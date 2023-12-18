@@ -12,7 +12,7 @@ const router = createRouter({
         {path: "/", component: Home},
         {path: "/", redirect: '/Home'},
         {path: "/Products", component: Product},
-        {name: "ProductDetail", path: "/ProductDetail", component: ProductDetail},
+        {path: "/ProductDetail", component: ProductDetail},
         {path: "/Login", component: Login},
         {path: "/Cart", component: Cart},
         {path: "/:notFound(.*)", component: NotFound},

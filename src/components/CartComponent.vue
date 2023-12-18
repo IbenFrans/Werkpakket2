@@ -1,8 +1,32 @@
 <script>
+import { useUsersStore } from '../stores/users'
+
 export default {
     props: [
         'item'
-    ]
+    ],
+    data(){
+        return{
+            userStore: useUsersStore()
+        }
+    },
+    computed: {
+        totalPrice(){
+            return this.item.price * this.item.amount
+        },
+        totalBtw(){
+            return this.totalPrice + this.totalPrice * 0.21
+        }
+    },
+    methods: {
+        removeItem(itemId){
+            this.userStore.removeItem(itemId)
+        },
+        changeAmount(item, itemAmount){
+            console.log(itemAmount)
+            this.userStore.changeItemAmount(item, itemAmount)
+        }
+    }
 }
 </script>
 <template lang="">
@@ -11,19 +35,18 @@ export default {
             <img :src="item.image" :alt="item.altimage"/>
         </div>
         <div class="itemDescription">
-            <h3>{{ item.titel }}</h3>
+            <h3>{{ item.titel }} x {{ item.amount }}</h3>
             <p>{{ item.description }}</p>
-            <p>x {{ item.amount }}</p>
             <div class="itemEdit">
-            <div class="itemEditAmount">
-                <input type="number" id="amount" name="quantity" min="1" max="5" :value="item.amount">
-                <button class="amountConfirm">OK</button>
+                <div class="itemEditAmount">
+                    <input type="number" id="amount" name="quantity" min="1" :max="item.stock" v-model="item.amount">
+                </div>
+                <button class="itemRemove" @click="removeItem(item.id)">Remove</button>
             </div>
-            <button class="itemRemove">Remove</button>
-        </div>
         </div>
         <div>
-
+            <p>€ {{ totalPrice }}</p>
+            <p>inc Btw € {{ totalBtw }}</p>
         </div>
     </div>
 </template>
