@@ -3,6 +3,7 @@ import Home from '@/views/HomeView.vue'
 import Product from '@/views/ProductView.vue'
 import ProductDetail from '@/views/ProductDetailView.vue'
 import Login from '@/views/LoginView.vue'
+import Cart from '@/views/CartView.vue'
 import NotFound from '@/views/NotFoundView.vue'
 
 const router = createRouter({
@@ -11,8 +12,9 @@ const router = createRouter({
         {path: "/", component: Home},
         {path: "/", redirect: '/Home'},
         {path: "/Products", component: Product},
-        {path: "/ProductDetail", component: ProductDetail},
+        {name: "ProductDetail", path: "/ProductDetail", component: ProductDetail},
         {path: "/Login", component: Login},
+        {path: "/Cart", component: Cart},
         {path: "/:notFound(.*)", component: NotFound},
     ]
 })

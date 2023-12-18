@@ -1,25 +1,23 @@
 import { defineStore } from "pinia"
+import productsJson from '/src/data/products.json'
 
-export const useProductsStore = defineStore['products',{
+export const useProductsStore = defineStore('products',{
     state: () => ({
-        products: fetchProducts()
+        products: productsJson
     }),
+    getters:{
+      popularProducts(){
+        const sortedProducts = this.products.sort((a, b) => b.stock - a.stock)
+        return sortedProducts.slice(0, 3)
+    }
+    },
     actions: {
-        async fetchProducts() {
-            try {
-              const response = await fetch('@/products.json'); // Replace with the correct path if it's in a different location
-              if (!response.ok) {
-                throw new Error('Failed to fetch products');
-              }
-              const data = await response.json();
-              this.setProducts(data);
-            } catch (error) {
-              console.error('Error fetching products:', error);
-            }
-          },
-          setProducts(products) {
-            this.products = products;
-          }
+      findProduct(id){
+        return this.products.find(product => product.id === id);
+      },
+      changeStock(id, amount){
+        this.products.find(product => product.id === id).stock = amount;
+      }
     }
 
-}]
+})

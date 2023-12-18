@@ -1,56 +1,11 @@
 <script>
-import HeaderComponent from '../components/HeaderComponent.vue';
+import HeaderComponent from '@/components/HeaderComponent.vue';
+import { useUsersStore } from '@/stores/users';
 
 export default {
     data(){
         return{
-            users: [
-            {
-    email: 'john.doe@example.com',
-    password: 'P@ssw0rd!',
-    streetname: 'Main Street',
-    streetnumber: 23,
-    postalCode: 1000,
-    city: 'Brussels',
-    country: 'Belgium'
-  },
-  {
-    email: 'alice.smith@example.com',
-    password: 'SecurePwd123',
-    streetname: 'Canal Avenue',
-    streetnumber: 45,
-    postalCode: 9000,
-    city: 'Ghent',
-    country: 'Belgium'
-  },
-  {
-    email: 'michael.johnson@example.com',
-    password: 'SecretPass789',
-    streetname: 'Market Street',
-    streetnumber: 67,
-    postalCode: 2000,
-    city: 'Antwerp',
-    country: 'Belgium'
-  },
-  {
-    email: 'sophia.wong@example.com',
-    password: 'P@ssw0rd!',
-    streetname: 'Park Lane',
-    streetnumber: 89,
-    postalCode: 3000,
-    city: 'Leuven',
-    country: 'Belgium'
-  },
-  {
-    email: 'pablo.garcia@example.com',
-    password: 'P@55word!',
-    streetname: 'Hill Street',
-    streetnumber: 101,
-    postalCode: 5000,
-    city: 'Namur',
-    country: 'Belgium'
-  }
-            ],
+            userStore: useUsersStore(),
             email: "",
             password: "",
             loginError: "",
@@ -61,15 +16,18 @@ export default {
         HeaderComponent
     },
     computed:{
+        users(){
+            return this.userStore.users;
+        },
         headerText(){
-            if (!this.loggedIn){
+            if (!this.userStore.loggedIn){
                 return "Log in!"
             } else {
                 return "Welcome!"
             }
         },
         headerSubText(){
-            if (!this.loggedIn){
+            if (!this.userStore.loggedIn){
                 return "Join the shneak side, we have cookies!"
             } else {
                 return "Here have a tasty cookie!"
@@ -83,10 +41,11 @@ export default {
 
       if (foundUser) {
         // Successful login
-        this.loggedIn = true;
+        this.userStore.loggedIn = foundUser;
         console.log('Login successful');
         this.loginError = ''; // Clear any previous login error
         // Here you can navigate to a new page or perform other actions upon successful login
+        this.$router.push("Cart")
       } else {
         // Invalid credentials
         this.loginError = 'Invalid email or password. Please try again.';
@@ -96,7 +55,7 @@ export default {
     logout(){
         this.email = "",
         this.password = "",
-        this.loggedIn = false;
+        this.userStore.loggedIn = "";
     }
     }
     
@@ -106,7 +65,7 @@ export default {
     <main>
         <HeaderComponent :title="headerText" :subtext="headerSubText"/>
         
-        <form @submit.prevent="login" v-if="!loggedIn">
+        <form @submit.prevent="login" v-if="!userStore.loggedIn">
             <p v-if="loginError" class="errorMessage tags">{{ loginError }}</p>
             <label for="email">E-mail</label>
             <input type="text" id="email" placeholder="john@doe.com" v-model="email">
@@ -117,9 +76,9 @@ export default {
                 <button class="changePasswordButton">Change password</button>
             </div>
         </form>
-        <div v-else>
+        <div v-else class="logout">
             <p>Please dont log out</p>
-            <button class="errorMessage tags" @click="Logout">Log out</button>
+            <button class="errorMessage tags" @click="logout()">Log out</button>
         </div>
         
     </main>

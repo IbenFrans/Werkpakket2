@@ -1,0 +1,56 @@
+@use 'base' as *;
+
+.cartComponent{
+    display: flex;
+    padding: 1rem;
+    width: 500px;
+    background-color: white;
+    border-radius: 5px;
+    margin: 1rem;
+
+    .imgDiv{
+        height: 120px;
+        width: 120px;
+
+        img{
+            object-fit: cover;
+            height: 120px;
+            width: 120px;
+         }
+    }
+
+    .itemDescription{
+        margin-left: 1rem;
+        width: 100%;
+
+        h3{
+            color: $white;
+            background-color: $darkgrey;
+            display: block;
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+            border-radius: 5px;
+        }
+    }
+    .itemEdit{
+        display: flex;
+
+        .itemEditAmout{
+            display: flex;
+        }
+        #amount{
+            padding: 1rem;
+        }
+    }
+    .amountConfirm{
+        background-color: $green;
+        color: $white;
+        &:hover{
+            background-color: $darkgreen;
+        }
+    }
+    .itemRemove:hover {
+        background-color: red;
+    }
+}

@@ -1,0 +1,67 @@
+[
+    {
+        "email": "test",
+        "password": "test",
+        "streetname": "Test Street",
+        "streetnumber": 23,
+        "postalCode": 1000,
+        "city": "Brussels",
+        "country": "Belgium",
+        "cart": [
+            {"id": 1, "amount": 1},
+            {"id": 4, "amount": 2},
+            {"id": 5, "amount": 1}
+        ]
+      },
+    {
+      "email": "john.doe@example.com",
+      "password": "P@ssw0rd!",
+      "streetname": "Main Street",
+      "streetnumber": 23,
+      "postalCode": 1000,
+      "city": "Brussels",
+      "country": "Belgium",
+      "cart": []
+    },
+    {
+      "email": "alice.smith@example.com",
+      "password": "SecurePwd123",
+      "streetname": "Canal Avenue",
+      "streetnumber": 45,
+      "postalCode": 9000,
+      "city": "Ghent",
+      "country": "Belgium",
+      "cart": []
+    },
+    {
+      "email": "michael.johnson@example.com",
+      "password": "SecretPass789",
+      "streetname": "Market Street",
+      "streetnumber": 67,
+      "postalCode": 2000,
+      "city": "Antwerp",
+      "country": "Belgium",
+      "cart": []
+    },
+    {
+      "email": "sophia.wong@example.com",
+      "password": "P@ssw0rd!",
+      "streetname": "Park Lane",
+      "streetnumber": 89,
+      "postalCode": 3000,
+      "city": "Leuven",
+      "country": "Belgium",
+      "cart": []
+    },
+    {
+      "email": "pablo.garcia@example.com",
+      "password": "P@55word!",
+      "streetname": "Hill Street",
+      "streetnumber": 101,
+      "postalCode": 5000,
+      "city": "Namur",
+      "country": "Belgium",
+      "cart": []
+    }
+  ]
+  

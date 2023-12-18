@@ -1,25 +1,16 @@
 <script>
+import { useProductsStore } from '@/stores/products';
 export default {
     data(){
         return{
         productPage: {path:"/Products", name: "Back"},
-        product: {
-            id: 1,
-            titel: "Kirby with knife",
-            description: "Cute but deadly",
-            longDescription: "This absolute gorgeous round pink blob has some murderous tendencies.<br>He may be cute but he'll cut you up like fish.\<br>He came to kill people and chew bubblegum and he's all out of bubblegum.<br><br>This piece was made in Illustrator",
-            image: "src/assets/kirby.png",
-            altImage: "Art kirby with knife",
-            price: 75.99,
-            btw: 5,
-            stock: 50,
-            tags: [
-                "cute",
-                "deadly",
-                "digital"
-            ]
-        },
+        productStore: useProductsStore(),
         }
+    },
+    computed: {
+        product(){
+            return this.productStore.findProduct(this.$route.params.Id)
+        } 
     },
     methods: {
         goToProducts(){
@@ -31,7 +22,6 @@ export default {
 <template lang="">
     <main>
         <button class="backButton" @click="goToProducts">&lt; Back</button>
-        <!-- <button class="backButton"><a href="products.html">&lt; back</a></button> -->
         <div class="product">
             <img :src="product.image" :alt="product.altImage"/>
             <div class="productDetails">
