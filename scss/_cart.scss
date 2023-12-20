@@ -3,14 +3,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    .shoppingConfirm{
+        background-color: $green;
+        color: $white;
+        &:hover{
+            background-color: $darkgreen;
+        }
+    }
 }
+
 .cartComponent{
     display: flex;
     padding: 1rem;
     width: 600px;
     background-color: white;
     border-radius: 5px;
-    margin: 1rem;
 
     .imgDiv{
         height: 120px;
@@ -54,7 +62,51 @@
             background-color: $darkgreen;
         }
     }
-    .itemRemove:hover {
-        background-color: red;
+    .itemRemove {
+        background-color: $red;
+        color: $white;
+        &:hover {
+            background-color: $darkred;
+        }
+    }
+    
+}
+
+.Totaalprijs{
+    margin-top: 2rem;
+    text-align: center;
+    background-color: white;
+    padding: 1rem;
+    width: 600px;
+    border-radius: 5px;
+    
+    button{
+        margin-top: 1rem;
+    }
+}
+
+.checkOut{
+    padding: 1rem;
+    max-width: 600px;
+    margin: 0 auto 1rem auto;
+    border: 3px solid $grey;
+    border-radius: 5px;
+    label{
+        margin-bottom: 0;
+        padding: 0;
+    }
+    input{
+        margin-top: 0;
+        border: 1px solid $grey;
+    }
+    .radioLabel{
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+}
+.checkBoxDiv{
+    text-align: center;
+    label, input{
+       margin: 1rem;
     }
 }

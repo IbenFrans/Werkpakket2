@@ -5,6 +5,8 @@ $grey: #c0c0c0;
 $white: #edf2f3;
 $green: #4fc14b;
 $darkgreen: #2d702b;
+$red: #c14b4b;
+$darkred: #923636;
 
 /* Fontsize */
 $font-lg: 24;
@@ -80,9 +82,12 @@ main{
     margin: 50rem;
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
+    min-height: 100vh;
 }
 
 .selected{
     @include hover();
     transition: none;
 }
+

@@ -33,12 +33,12 @@ export const useUsersStore = defineStore('users',{
         changeItemAmount(item, amount){
             this.findItem(item.id).amount = amount;
         },
-        addItem(product){
+        addItem(product, amount){
             let productInCart = this.findItem(product.id)
             if (productInCart){
-                this.findItem(product.id).amount += 1
+                this.findItem(product.id).amount = amount
             } else{
-                product.amount = 1
+                product.amount = amount
                 this.loggedIn.cart.push(product)
             }
             

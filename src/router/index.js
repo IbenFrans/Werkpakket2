@@ -5,6 +5,7 @@ import ProductDetail from '@/views/ProductDetailView.vue'
 import Login from '@/views/LoginView.vue'
 import Cart from '@/views/CartView.vue'
 import NotFound from '@/views/NotFoundView.vue'
+import Checkout from '@/views/Checkout.vue'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -15,6 +16,7 @@ const router = createRouter({
         {path: "/ProductDetail", component: ProductDetail},
         {path: "/Login", component: Login},
         {path: "/Cart", component: Cart},
+        {path: "/Checkout", component: Checkout},
         {path: "/:notFound(.*)", component: NotFound},
     ]
 })

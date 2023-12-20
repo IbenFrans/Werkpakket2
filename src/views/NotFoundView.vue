@@ -1,10 +1,21 @@
 <script>
+import HeaderComponent from '@/components/HeaderComponent.vue';
+
 export default {
+    data(){
+        return{
+            headerText: "Oops!",
+            subText: "This page does not seem to exist ¯\\_(ツ)_/¯",
+        }
+    },
+    components:{
+        HeaderComponent
+    }
     
 }
 </script>
 <template lang="">
-    <h1>Not Found</h1>
+    <HeaderComponent :title="headerText" :subtext="subText"/>
 </template>
 
 <style lang="">

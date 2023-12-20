@@ -35,18 +35,26 @@ export default {
             }
         }
         
+    },
+    methods:{
+        goToCheckOut(){
+            this.$router.push("Checkout")
+        }
     }
 }
 </script>
 <template lang="">
     <HeaderComponent :title="headerText" :subtext="getSubText"/>
-        <div class="shoppingCart" v-if="getShoppingCart.length !== 0">
+    <div class="shoppingCart" v-if="getShoppingCart.length !== 0">
         <CartComponent v-for="item in this.getShoppingCart" 
-        v-bind:id="item.id"
-        v-bind:item="item">
-    </CartComponent>
-    <p>Totaalprijs: € {{ getTotalPrice }}</p>
-    <p>Totaalprijs (inc Btw): € {{ getTotalBtw }}</p>
+            v-bind:id="item.id"
+            v-bind:item="item">
+        </CartComponent>
+        <div class="Totaalprijs">
+            <p>Totaalprijs: € {{ getTotalPrice }}</p>
+            <p>Totaalprijs (inc Btw): € {{ getTotalBtw }}</p>
+            <button class="shoppingConfirm" @click="goToCheckOut">Confirm</button>
+        </div>
     </div>
 </template>
 
