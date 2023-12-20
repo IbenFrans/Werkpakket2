@@ -7,7 +7,6 @@ export default {
     data(){
         return{
             headerText: "Shopping Cart",
-            headerSubText: "All your goodies are here!",
             userStore: useUsersStore(),
         }
     },
@@ -27,14 +26,21 @@ export default {
         },
         getTotalBtw(){
             return this.userStore.totalBtw
+        },
+        getSubText(){
+            if (this.getShoppingCart == 0){
+                return "Oops, seems a bit empty here!"
+            } else {
+                return "All your goodies are here!"
+            }
         }
         
     }
 }
 </script>
 <template lang="">
-    <HeaderComponent :title="headerText" :subtext="headerSubText"/>
-    <div class="shoppingCart">
+    <HeaderComponent :title="headerText" :subtext="getSubText"/>
+        <div class="shoppingCart" v-if="getShoppingCart.length !== 0">
         <CartComponent v-for="item in this.getShoppingCart" 
         v-bind:id="item.id"
         v-bind:item="item">
