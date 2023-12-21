@@ -48,6 +48,7 @@
     }
     .itemEdit{
         display: flex;
+        justify-content: space-between;
 
         .itemEditAmout{
             display: flex;
@@ -73,17 +74,29 @@
     .hide{
         display: none;
     }
+
+    .itemPrice{
+        align-self: center;
+        text-align: end;
+        p{
+            margin: 0.5rem;
+        }
+
+    }
     
 }
 
 .Totaalprijs{
-    margin-top: 2rem;
     text-align: center;
     background-color: white;
     padding: 1rem;
     width: 600px;
     border-radius: 5px;
     
+    p{
+        margin: 0.5rem;
+    }
+
     button{
         margin-top: 1rem;
     }
@@ -113,4 +126,20 @@
     label, input{
        margin: 1rem;
     }
+}
+.shoppingConfirm{
+    display: flex;
+    text-align: center;
+    margin: 0 auto;
+    background-color: $green;
+    color: white;
+    &:hover{
+        background-color: $darkgreen;
+    }
+}
+
+.checkout{
+    width: 100%;
+    display: block;
+    text-align: end;
 }

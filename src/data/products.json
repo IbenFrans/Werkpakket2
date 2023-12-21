@@ -3,11 +3,11 @@
     "id": 1,
     "titel": "Kirby with knife",
     "description": "Cute but deadly",
-    "longDescription": "This absolute gorgeous round pink blob has some murderous tendencies.<br>He may be cute but he'll cut you up like fish.<br>He came to kill people and chew bubblegum and he's all out of bubblegum.<br><br>This piece was made in Illustrator",
+    "longDescription": "This absolute gorgeous round pink blob has some murderous tendencies. He may be cute but he'll cut you up like fish. He came to kill people and chew bubblegum and he's all out of bubblegum.",
     "image": "src/assets/kirby.png",
     "altImage": "Art kirby with knife",
     "price": 50,
-    "btw": 5,
+    "btw": 0,
     "stock": 53,
     "tags": [
       "cute",
@@ -19,12 +19,12 @@
     "id": 2,
     "titel": "Coffee Slayer",
     "description": "Defeat the morning!",
-    "longDescription": "",
+    "longDescription": "This fierce cup of java means business. It's not just your average morning brew; it's a wake-up call with a punch. Defy the drowsiness and conquer the day!",
     "image": "src/assets/coffeeslayer.png",
     "altImage": "Art Coffee slayer",
     "price": 50,
-    "btw": 5,
-    "stock": 77,
+    "btw": 6,
+    "stock": 0,
     "tags": [
       "coffee",
       "deadly",
@@ -35,11 +35,11 @@
     "id": 3,
     "titel": "Hungry Mimic",
     "description": "Not the treasure you want!",
-    "longDescription": "",
+    "longDescription": "Beneath its innocuous appearance lies a treacherous trickster. This mimic doesn't guard treasures; it hungers for adventurers. Beware the glinting gold—it might just bite back!",
     "image": "src/assets/mimic.png",
     "altImage": "Art Mimic",
     "price": 20,
-    "btw": 5,
+    "btw": 12,
     "stock": 89,
     "tags": [
       "treasure",
@@ -51,11 +51,11 @@
     "id": 4,
     "titel": "Skelecat",
     "description": "Spooky purrs...",
-    "longDescription": "",
+    "longDescription": "This spectral feline prowls in the shadows, its eerie purrs echoing through the night. A combination of cute and chilling, it's the perfect companion for those who dare to embrace the supernatural.",
     "image": "src/assets/skelecat.png",
     "altImage": "Art Skelecat",
     "price": 25,
-    "btw": 5,
+    "btw": 21,
     "stock": 33,
     "tags": [
       "cute",
@@ -67,43 +67,43 @@
     "id": 5,
     "titel": "Spicy Fishes",
     "description": "Smells fishy",
-    "longDescription": "",
+    "longDescription": "A burst of flavor and heat, these spicy fishes tantalize your taste buds and tickle your senses. Not just your ordinary seafood, but a fiery adventure on a plate!",
     "image": "src/assets/vissen.png",
     "altImage": "Art Vissen",
     "price": 100,
-    "btw": 5,
+    "btw": 0,
     "stock": 61,
     "tags": [
       "spicy",
       "fish",
-      "digital"
+      "painting"
     ]
   },
   {
     "id": 6,
     "titel": "Shrunkenhead",
     "description": "He looks thirsty",
-    "longDescription": "",
+    "longDescription": "Sealed in a jar, this shriveled head appears parched and longing for more than just its confinement. An eerie artifact that whispers tales of lost magic and ancient rituals.",
     "image": "src/assets/shrunkenhead.png",
     "altImage": "Shrunkenhead in jar",
     "price": 50,
-    "btw": 5,
-    "stock": 22,
+    "btw": 6,
+    "stock": 0,
     "tags": [
       "cute",
       "deadly",
-      "digital"
+      "graphic art"
     ]
   },
   {
     "id": 7,
     "titel": "Moonlit Howl",
     "description": "Embrace the night!",
-    "longDescription": "",
+    "longDescription": "Under the celestial glow, a lone wolf raises its voice, sending chills down your spine. Its haunting melody speaks of untamed wilderness and nocturnal mysteries.",
     "image": "src/assets/moonlit-howl.png",
     "altImage": "Art Moonlit Howl",
     "price": 40,
-    "btw": 5,
+    "btw": 12,
     "stock": 92,
     "tags": [
       "wolf",
@@ -115,11 +115,11 @@
     "id": 8,
     "titel": "Space Oddity",
     "description": "Far out in space!",
-    "longDescription": "",
+    "longDescription": "A cosmic voyage beyond the stars, where the unknown beckons. This mesmerizing art piece captures the enigmatic beauty of celestial bodies and the wonders of the universe.",
     "image": "src/assets/space-oddity.png",
     "altImage": "Art Space Oddity",
     "price": 55,
-    "btw": 5,
+    "btw": 21,
     "stock": 5,
     "tags": [
       "space",
@@ -131,11 +131,11 @@
     "id": 9,
     "titel": "Floral Fantasy",
     "description": "Nature's beauty!",
-    "longDescription": "",
+    "longDescription": "An explosion of vibrant petals and foliage, this artwork celebrates the splendor of nature. It invites you to wander through a dreamy garden of imagination and tranquility.",
     "image": "src/assets/floral-fantasy.png",
     "altImage": "Art Floral Fantasy",
     "price": 30,
-    "btw": 5,
+    "btw": 0,
     "stock": 48,
     "tags": [
       "flowers",
@@ -147,11 +147,11 @@
     "id": 10,
     "titel": "Ninja Penguin",
     "description": "Silent and Deadly!",
-    "longDescription": "",
+    "longDescription": "From the frigid realms, a master of stealth emerges—a ninja penguin, swift and lethal. Its cold gaze pierces through the shadows, ready to strike with precise, icy precision.",
     "image": "src/assets/ninja-penguin.png",
     "altImage": "Art Ninja Penguin",
     "price": 45,
-    "btw": 5,
+    "btw": 6,
     "stock": 81,
     "tags": [
       "ninja",
@@ -163,27 +163,27 @@
     "id": 11,
     "titel": "Vampire Bat",
     "description": "Beware the night!",
-    "longDescription": "",
+    "longDescription": "A creature of darkness with wings that slice through the midnight sky. This vampire bat's fangs drip with the promise of endless night and blood-curdling encounters.",
     "image": "src/assets/vampire-bat.png",
     "altImage": "Art Vampire Bat",
     "price": 35,
-    "btw": 5,
+    "btw": 12,
     "stock": 12,
     "tags": [
       "vampire",
       "bat",
-      "digital"
+      "graphic art"
     ]
   },
   {
     "id": 12,
     "titel": "Robot Samurai",
     "description": "Technological warrior!",
-    "longDescription": "",
+    "longDescription": "An amalgamation of ancient honor and modern innovation, this robotic samurai wields its futuristic blade with precision. Its mechanical grace speaks volumes of an era bridging tradition and technology.",
     "image": "src/assets/robot-samurai.png",
     "altImage": "Art Robot Samurai",
     "price": 60,
-    "btw": 5,
+    "btw": 21,
     "stock": 74,
     "tags": [
       "robot",
@@ -195,11 +195,11 @@
     "id": 13,
     "titel": "Glowing Fairy",
     "description": "Magical essence!",
-    "longDescription": "",
+    "longDescription": "A luminescent being from the ethereal realm, this glowing fairy radiates enchantment and wonder. Its presence illuminates the darkest corners, bringing a sprinkle of magic to the mundane.",
     "image": "src/assets/glowing-fairy.png",
     "altImage": "Art Glowing Fairy",
     "price": 25,
-    "btw": 5,
+    "btw": 0,
     "stock": 41,
     "tags": [
       "fairy",
@@ -211,75 +211,75 @@
     "id": 14,
     "titel": "Dragon's Breath",
     "description": "Fiery rage!",
-    "longDescription": "",
+    "longDescription": "From ancient legends, this dragon unleashes torrents of scorching flames and embodies the raw power of elemental fury. Its fiery breath ignites both awe and fear.",
     "image": "src/assets/dragons-breath.png",
     "altImage": "Art Dragon's Breath",
     "price": 75,
-    "btw": 5,
+    "btw": 6,
     "stock": 58,
     "tags": [
       "dragon",
       "fire",
-      "digital"
+      "graphic art"
     ]
   },
   {
     "id": 15,
     "titel": "Forest Guardian",
     "description": "Protecting the woods!",
-    "longDescription": "",
+    "longDescription": "Deep within the emerald forests, a mystical guardian stands tall, safeguarding the sanctity of nature. Its presence exudes ancient wisdom and unyielding protection.",
     "image": "src/assets/forest-guardian.png",
     "altImage": "Art Forest Guardian",
     "price": 40,
-    "btw": 5,
+    "btw": 12,
     "stock": 69,
     "tags": [
       "forest",
       "guardian",
-      "digital"
+      "painting"
     ]
   },
   {
     "id": 16,
     "titel": "Golden Phoenix",
     "description": "Rising from ashes!",
-    "longDescription": "",
+    "longDescription": "Elegance reborn from destruction, this golden phoenix soars with majestic splendor. Its radiant plumage tells a tale of resilience and eternal renewal.",
     "image": "src/assets/golden-phoenix.png",
     "altImage": "Art Golden Phoenix",
     "price": 80,
-    "btw": 5,
+    "btw": 21,
     "stock": 19,
     "tags": [
       "phoenix",
       "gold",
-      "digital"
+      "painting"
     ]
   },
   {
     "id": 17,
     "titel": "Electric Wolf",
     "description": "Charged up!",
-    "longDescription": "",
+    "longDescription": "In a crackling storm, an electric wolf prowls, its fur illuminated by sparks of lightning. A fusion of primal grace and electrifying power, it embodies the untamed energy of nature.",
     "image": "src/assets/electric-wolf.png",
     "altImage": "Art Electric Wolf",
     "price": 55,
-    "btw": 5,
+    "btw": 0,
     "stock": 87,
     "tags": [
       "electric",
       "wolf",
-      "digital"
+      "painting"
     ]
   },
   {
     "id": 18,
     "titel": "Frosty Yeti",
     "description": "Chilling presence!",
-    "longDescription": "",
+    "longDescription": "Amidst icy landscapes, the frosty yeti roams, leaving a trail of frost and mystery. Its imposing figure evokes the hushed whispers of snowy legends.",
     "image": "src/assets/frosty-yeti.png",
     "altImage": "Art Frosty Yeti",
     "price": 70,
-    "btw": 5,
+    "btw": 6,
     "stock": 8,
     "tags": [
       "yeti",
@@ -291,27 +291,27 @@
     "id": 19,
     "titel": "Mermaid's Song",
     "description": "Enchanting melodies!",
-    "longDescription": "",
+    "longDescription": "Beyond the shimmering waves, a mermaid's voice echoes, weaving enchanting melodies that captivate the soul. Her song transcends oceans and stirs the depths of the human spirit.",
     "image": "src/assets/mermaids-song.png",
     "altImage": "Art Mermaid's Song",
     "price": 45,
-    "btw": 5,
+    "btw": 12,
     "stock": 94,
     "tags": [
       "mermaid",
       "music",
-      "digital"
+      "painting"
     ]
   },
   {
     "id": 20,
     "titel": "Potion Master",
     "description": "Brewing magic elixirs!",
-    "longDescription": "",
+    "longDescription": "In a secret laboratory, the potion master concocts mystical elixirs that defy logic and bend reality. Each bubbling flask holds the promise of untold wonders and unexplored dimensions.",
     "image": "src/assets/potion-master.png",
     "altImage": "Art Potion Master",
     "price": 65,
-    "btw": 5,
+    "btw": 21,
     "stock": 37,
     "tags": [
       "potion",

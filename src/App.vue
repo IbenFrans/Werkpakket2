@@ -5,6 +5,7 @@
   export default {
         data() {
             return {
+            
             }
         },
         components: {
@@ -17,7 +18,9 @@
 
 <template>
   <NavComponent/>
+  <main>
   <router-view></router-view>
+</main>
   <FooterComponent/>
 </template>
 

@@ -4,16 +4,22 @@ import usersJson from '/src/data/users.json'
 export const useUsersStore = defineStore('users',{
     state: () => ({
        users: usersJson,
-    //    loggedIn: ""
+       confirmationOverview: [],
+       loggedIn: ""
     }),
     getters:{
         shoppingCart(){
-            return this.loggedIn.cart;
+            if(this.loggedIn === ""){
+                return []
+            } else {
+                return this.loggedIn.cart;
+            }
+            
         },
         // Testing login
-        loggedIn(){
-            return this.users[0]
-        },
+        // loggedIn(){
+        //     return this.users[0]
+        // },
         totalPrice(){
             let totaal = 0
             this.shoppingCart.forEach(item => {

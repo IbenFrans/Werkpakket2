@@ -6,9 +6,10 @@ export default {
             navItems: [
             {path: "/Products", name: "Products"},
             {path: "/Login", name: "Login"},
-            {path: "/Cart", name: "Cart"}
-        ]}
+            {path: "/Cart", name: "Cart"},
+            ],
     }
+    },  
 }
 </script>
 <template lang="">

@@ -7,10 +7,9 @@ import CartComponent from '../components/CartComponent.vue';
 export default {
     data(){
         return{
-            headerText: "Checkout",
-            subText: "Please fill in your information",
+            headerText: "Payment succesful",
+            subText: "Enjoy your goodies!",
             userStore: useUsersStore(),
-            user2: {},
             checkedForm: false,
             hide: "hide",
             checkout: "checkout"
@@ -18,14 +17,10 @@ export default {
     },
     components:{
         HeaderComponent,
-        FormComponent,
-        CartComponent
-        
+        CartComponent,
+        FormComponent
     },
     computed:{
-        user(){
-            return this.userStore.loggedIn
-        },
         getShoppingCart(){
             return this.userStore.shoppingCart
         },
@@ -35,22 +30,20 @@ export default {
         getTotalBtw(){
             return this.userStore.totalBtw
         },
-        
     },
     methods:{
-        goToConfirmation(){
-            this.userStore.confirmationOverview = this.user.cart
-            this.user.cart = []
-            this.$router.push("Confirmation")
+        backToProducts(){
+            this.$router.push("Products")
         }
     }
+    
 }
 </script>
 <template lang="">
     <HeaderComponent :title="headerText" :subtext="subText"></HeaderComponent>
-    <div class="shoppingCart" v-if="getShoppingCart.length !== 0">
+    <div class="shoppingCart" v-if="this.userStore.confirmationOverview.length !== 0">
     <CartComponent 
-            v-for="item in this.getShoppingCart" 
+            v-for="item in this.userStore.confirmationOverview" 
             v-bind:id="item.id"
             v-bind:item="item"
             v-bind:hide="hide"
@@ -61,19 +54,7 @@ export default {
             <p>Totaalprijs (inc Btw): € {{ getTotalBtw }}</p>
         </div>
     </div>
-    <FormComponent
-    v-bind:user="user"
-    v-bind:key="user.email">
-    </FormComponent>
-    <div class="checkBoxDiv">
-        <label for="facturatieAdress">Different shippingadress</label>
-        <input type="checkbox" v-model="checkedForm">
-    </div>
-    <FormComponent
-    v-if="checkedForm"
-    v-bind:user="user2"
-    ></FormComponent>
-    <button class="shoppingConfirm" @click="goToConfirmation">Confirm</button>
+    <button class="shoppingConfirm" @click="backToProducts">Back to Products</button>
 </template>
 <style lang="">
     

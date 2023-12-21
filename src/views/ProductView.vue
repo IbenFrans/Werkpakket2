@@ -64,7 +64,6 @@ export default {
 }
 </script>
 <template lang="">
-    <main>
     <header class="headerCenter">
         <h1>Products!</h1>
         <p>Get your shneak on with these designs!</p>
@@ -86,7 +85,6 @@ export default {
         </ul>
         <button @click="nextPage" v-if="currentPage !== totalPages">></button>
     </div>
-</main>
 </template>
 <style lang="">
     

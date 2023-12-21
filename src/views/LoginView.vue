@@ -62,7 +62,6 @@ export default {
 }
 </script>
 <template lang="">
-    <main>
         <HeaderComponent :title="headerText" :subtext="headerSubText"/>
         
         <form @submit.prevent="login" v-if="!userStore.loggedIn">
@@ -80,8 +79,6 @@ export default {
             <p>Please dont log out</p>
             <button class="errorMessage tags" @click="logout()">Log out</button>
         </div>
-        
-    </main>
 </template>
 
 <style lang="">

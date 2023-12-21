@@ -1,12 +1,18 @@
 <script>
 export default {
+    data(){
+        return{
+            footerH1: "Shneaky",
+            footerP: "Check me out!"
+        }
+    }
     
 }
 </script>
 <template lang="">
     <footer>
-        <h1>Shneaky</h1>
-        <p>Check me out</p>
+        <h1>{{ footerH1 }}</h1>
+        <p>{{ footerP }}</p>
         <ul>
             <li>
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 30 30">

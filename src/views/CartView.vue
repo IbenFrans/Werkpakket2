@@ -56,6 +56,7 @@ export default {
             <p>Totaalprijs: € {{ getTotalPrice }}</p>
             <p>Totaalprijs (inc Btw): € {{ getTotalBtw }}</p>
             <button class="shoppingConfirm" @click="goToCheckOut">Confirm</button>
+            
         </div>
     </div>
 </template>

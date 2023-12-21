@@ -6,6 +6,7 @@ import Login from '@/views/LoginView.vue'
 import Cart from '@/views/CartView.vue'
 import NotFound from '@/views/NotFoundView.vue'
 import Checkout from '@/views/Checkout.vue'
+import Confirmation from '@/views/Confirmation.vue'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -17,6 +18,7 @@ const router = createRouter({
         {path: "/Login", component: Login},
         {path: "/Cart", component: Cart},
         {path: "/Checkout", component: Checkout},
+        {path: "/Confirmation", component: Confirmation},
         {path: "/:notFound(.*)", component: NotFound},
     ]
 })

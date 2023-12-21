@@ -4,7 +4,8 @@ import { useUsersStore } from '../stores/users'
 export default {
     props: [
         'item',
-        'hide'
+        'hide',
+        'checkout'
     ],
     data(){
         return{
@@ -38,17 +39,18 @@ export default {
         <div class="itemDescription">
             <h3>{{ item.titel }} x {{ item.amount }}</h3>
             <p>{{ item.description }}</p>
-            <div class="itemEdit" :class="hide">
-                <div class="itemEditAmount">
+            <div class="itemEdit">
+                <div class="itemEditAmount" :class="hide">
                     <input type="number" id="amount" name="quantity" min="1" :max="item.stock" v-model="item.amount">
                 </div>
-                <button class="itemRemove" @click="removeItem(item.id)">Remove</button>
+                <button :class="hide" class="itemRemove" @click="removeItem(item.id)">Remove</button>
+                <div :class="checkout" class="itemPrice">
+                    <p>€ {{ totalPrice }}</p>
+                    <p>inc Btw € {{ totalBtw }}</p>
+                </div>
             </div>
         </div>
-        <div>
-            <p>€ {{ totalPrice }}</p>
-            <p>inc Btw € {{ totalBtw }}</p>
-        </div>
+        
     </div>
 </template>
 
