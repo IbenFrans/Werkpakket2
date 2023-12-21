@@ -3,7 +3,8 @@ import { useUsersStore } from '../stores/users'
 
 export default {
     props: [
-        'item'
+        'item',
+        'hide'
     ],
     data(){
         return{
@@ -37,7 +38,7 @@ export default {
         <div class="itemDescription">
             <h3>{{ item.titel }} x {{ item.amount }}</h3>
             <p>{{ item.description }}</p>
-            <div class="itemEdit">
+            <div class="itemEdit" :class="hide">
                 <div class="itemEditAmount">
                     <input type="number" id="amount" name="quantity" min="1" :max="item.stock" v-model="item.amount">
                 </div>

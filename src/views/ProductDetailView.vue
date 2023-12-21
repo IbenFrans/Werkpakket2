@@ -12,7 +12,13 @@ export default {
     },
     computed: {
         product(){
-            return this.productStore.findProduct(this.productStore.selectedProduct)
+            const notEmpty = this.productStore.selectedProduct
+            if (!notEmpty){
+                return this.productStore.findProduct(1)
+            } else {
+                return this.productStore.findProduct(this.productStore.selectedProduct)
+            }
+            
         },
     },
     methods: {
@@ -20,7 +26,6 @@ export default {
             this.$router.push("Products")
         },
         addItem(product, amount){
-            console.log(amount)
             this.userStore.addItem(product, amount)
         }
     }

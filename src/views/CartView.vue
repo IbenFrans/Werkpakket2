@@ -8,6 +8,7 @@ export default {
         return{
             headerText: "Shopping Cart",
             userStore: useUsersStore(),
+            hide: ""
         }
     },
     components:{
@@ -48,7 +49,8 @@ export default {
     <div class="shoppingCart" v-if="getShoppingCart.length !== 0">
         <CartComponent v-for="item in this.getShoppingCart" 
             v-bind:id="item.id"
-            v-bind:item="item">
+            v-bind:item="item"
+            v-bind:hide="hide">
         </CartComponent>
         <div class="Totaalprijs">
             <p>Totaalprijs: € {{ getTotalPrice }}</p>
