@@ -57,7 +57,7 @@ export const useUsersStore = defineStore('users',{
             
         },
         removeItem(id){
-            let index = this.findItem(id);
+            let index = this.findItem(id).id;
             this.loggedIn.cart.splice(index, 1);
             console.log(this.loggedIn.cart)
         },
