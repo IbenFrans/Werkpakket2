@@ -8,7 +8,11 @@ export default {
         productStore: useProductsStore(),
         userStore: useUsersStore(),
         amount: 1,
-        productAdded: ""
+        productAdded: "",
+        backButton: "< Back",
+        addButton: "Add to shoppingcart",
+        loginButton: "Login to add to cart",
+        outOfStockText: "Out of stock"
         }
     },
     computed: {
@@ -37,7 +41,7 @@ export default {
 }
 </script>
 <template lang="">
-        <button class="backButton" @click="goToProducts">&lt; Back</button>
+        <button class="backButton" @click="goToProducts">{{ backButton }}</button>
         <div class="product" v-if="product">
             <img :src="product.image" :alt="product.altImage"/>
             <div class="productDetails">
@@ -62,13 +66,13 @@ export default {
                         <circle cx="84.22" cy="163.05" r="17.57"/>
                         <circle cx="162.4" cy="163.05" r="17.57"/>
                         </g>
-                        </svg>Add to shoppingcart
+                        </svg>{{ addButton }}
                     </button>
                     </div>
                     <div v-else>
-                        <button @click="goToLogin">Login to add to cart</button>
+                        <button @click="goToLogin">{{ loginButton }}</button>
                     </div>
-                    <h3 v-if="product.stock == 0">Out of stock</h3>
+                    <h3 v-if="product.stock == 0">{{ outOfStockText }}</h3>
                 </div>
             </div>
         </div>

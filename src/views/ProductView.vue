@@ -1,6 +1,7 @@
 <script>
 import ProductCardComponent from '@/components/ProductCardComponent.vue'
 import {useProductsStore }from '@/stores/products.js'
+import HeaderComponent from '@/components/HeaderComponent.vue';
 
 export default {
     data(){
@@ -15,6 +16,8 @@ export default {
                 "painting",
                 "graphic art"
             ],
+            headerText: "Products!",
+            subText: "Get your shneak on with these designs!",
         }
     },
     computed: {
@@ -35,7 +38,8 @@ export default {
         },
     },
     components: {
-        ProductCardComponent
+        ProductCardComponent,
+        HeaderComponent
     },
     methods: {
         nextPage(){
@@ -64,10 +68,7 @@ export default {
 }
 </script>
 <template lang="">
-    <header class="headerCenter">
-        <h1>Products!</h1>
-        <p>Get your shneak on with these designs!</p>
-    </header>
+    <HeaderComponent :title="headerText" :subtext="subText"></HeaderComponent>
     <div class="filter">
         <button v-for="filterTag in this.filters" @click="filter(filterTag)" :class="{ 'selected': filterTag === currentFilter }">{{ filterTag[0].toUpperCase() + filterTag.slice(1) }}</button>
     </div>

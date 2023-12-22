@@ -143,3 +143,17 @@
     display: block;
     text-align: end;
 }
+.activeCart{
+    text-align: right;
+    background-color: $green;
+    color: white;
+    padding: 0.5rem;
+    margin: 1rem;
+    display: inline-block;
+    border-radius: 10px;
+
+    &:hover{
+        cursor: pointer;
+        background-color: $darkgreen;
+    }
+}

@@ -8,13 +8,14 @@ export default {
             {path: "/Login", name: "Login"},
             {path: "/Cart", name: "Cart"},
             ],
+            shneakyShop: "Shneaky Shop"
     }
     },  
 }
 </script>
 <template lang="">
     <nav>
-        <p><router-link  :to="homeNav.path">Shneaky Shop</router-link></p>
+        <p><router-link  :to="homeNav.path">{{ shneakyShop }}</router-link></p>
     <ul>
         <li v-for="navItem in navItems">
         <router-link :to="navItem.path">{{  navItem.name }}</router-link></li>

@@ -76,14 +76,12 @@ $font-sm: 16;
 }
 body{
     background-color: $white;
+
     
 }
 main{
-    margin: 50rem;
+    margin: 0 auto 5rem auto;
     max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-    min-height: 100vh;
 }
 
 .selected{

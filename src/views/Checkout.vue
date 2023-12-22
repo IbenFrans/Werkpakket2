@@ -13,7 +13,11 @@ export default {
             user2: {},
             checkedForm: false,
             hide: "hide",
-            checkout: "checkout"
+            checkout: "checkout",
+            pTotalPrice: "Totaalprijs: € ",
+            pTotalBtw: "Totaalprijs (inc Btw): € ",
+            labelOtherAdress: "Different shippingadress",
+            confirmButton: "Confirm"
         }
     },
     components:{
@@ -40,6 +44,8 @@ export default {
     methods:{
         goToConfirmation(){
             this.userStore.confirmationOverview = this.user.cart
+            this.userStore.confirmationTotal = this.getTotalPrice
+            this.userStore.confirmationTotalBtw = this.getTotalBtw
             this.user.cart = []
             this.$router.push("Confirmation")
         }
@@ -57,8 +63,8 @@ export default {
             v-bind:checkout="checkout">
         </CartComponent>
         <div class="Totaalprijs">
-            <p>Totaalprijs: € {{ getTotalPrice }}</p>
-            <p>Totaalprijs (inc Btw): € {{ getTotalBtw }}</p>
+            <p>{{ pTotalPrice }}{{ getTotalPrice }}</p>
+            <p>{{ pTotalBtw }}{{ getTotalBtw }}</p>
         </div>
     </div>
     <FormComponent
@@ -66,14 +72,14 @@ export default {
     v-bind:key="user.email">
     </FormComponent>
     <div class="checkBoxDiv">
-        <label for="facturatieAdress">Different shippingadress</label>
+        <label for="facturatieAdress">{{ labelOtherAdress }}</label>
         <input type="checkbox" v-model="checkedForm">
     </div>
     <FormComponent
     v-if="checkedForm"
     v-bind:user="user2"
     ></FormComponent>
-    <button class="shoppingConfirm" @click="goToConfirmation">Confirm</button>
+    <button class="shoppingConfirm" @click="goToConfirmation">{{ confirmButton }}</button>
 </template>
 <style lang="">
     

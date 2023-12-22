@@ -10,6 +10,11 @@ export default {
             password: "",
             loginError: "",
             loggedIn: false,
+            labelEmail: "E-mail",
+            labelPassword: "Password",
+            loginButton: "Login",
+            pLogout: "Please dont log out",
+            logoutButton: "Logout"
         }
     },
     components:{
@@ -66,18 +71,17 @@ export default {
         
         <form @submit.prevent="login" v-if="!userStore.loggedIn">
             <p v-if="loginError" class="errorMessage tags">{{ loginError }}</p>
-            <label for="email">E-mail</label>
+            <label for="email">{{ labelEmail }}</label>
             <input type="text" id="email" placeholder="john@doe.com" v-model="email">
-            <label for="password">Password</label>
+            <label for="password">{{ labelPassword }}</label>
             <input type="password" id="password" placeholder="*********" v-model="password">
             <div class="formButtons">
-                <button class="loginButton" type="submit">Login</button>
-                <button class="changePasswordButton">Change password</button>
+                <button class="loginButton" type="submit">{{ loginButton }}</button>
             </div>
         </form>
         <div v-else class="logout">
-            <p>Please dont log out</p>
-            <button class="errorMessage tags" @click="logout()">Log out</button>
+            <p>{{ pLogout }}</p>
+            <button class="errorMessage tags" @click="logout()">{{ logoutButton }}</button>
         </div>
 </template>
 

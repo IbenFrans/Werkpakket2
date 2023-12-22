@@ -23,7 +23,7 @@
     "image": "src/assets/coffeeslayer.png",
     "altImage": "Art Coffee slayer",
     "price": 50,
-    "btw": 6,
+    "btw": 0.6,
     "stock": 0,
     "tags": [
       "coffee",
@@ -39,7 +39,7 @@
     "image": "src/assets/mimic.png",
     "altImage": "Art Mimic",
     "price": 20,
-    "btw": 12,
+    "btw": 0.12,
     "stock": 89,
     "tags": [
       "treasure",
@@ -55,7 +55,7 @@
     "image": "src/assets/skelecat.png",
     "altImage": "Art Skelecat",
     "price": 25,
-    "btw": 21,
+    "btw": 0.21,
     "stock": 33,
     "tags": [
       "cute",
@@ -87,7 +87,7 @@
     "image": "src/assets/shrunkenhead.png",
     "altImage": "Shrunkenhead in jar",
     "price": 50,
-    "btw": 6,
+    "btw": 0.6,
     "stock": 0,
     "tags": [
       "cute",
@@ -103,7 +103,7 @@
     "image": "src/assets/moonlit-howl.png",
     "altImage": "Art Moonlit Howl",
     "price": 40,
-    "btw": 12,
+    "btw": 0.12,
     "stock": 92,
     "tags": [
       "wolf",
@@ -119,7 +119,7 @@
     "image": "src/assets/space-oddity.png",
     "altImage": "Art Space Oddity",
     "price": 55,
-    "btw": 21,
+    "btw": 0.21,
     "stock": 5,
     "tags": [
       "space",
@@ -151,7 +151,7 @@
     "image": "src/assets/ninja-penguin.png",
     "altImage": "Art Ninja Penguin",
     "price": 45,
-    "btw": 6,
+    "btw": 0.6,
     "stock": 81,
     "tags": [
       "ninja",
@@ -167,7 +167,7 @@
     "image": "src/assets/vampire-bat.png",
     "altImage": "Art Vampire Bat",
     "price": 35,
-    "btw": 12,
+    "btw": 0.12,
     "stock": 12,
     "tags": [
       "vampire",
@@ -183,7 +183,7 @@
     "image": "src/assets/robot-samurai.png",
     "altImage": "Art Robot Samurai",
     "price": 60,
-    "btw": 21,
+    "btw": 0.21,
     "stock": 74,
     "tags": [
       "robot",
@@ -215,7 +215,7 @@
     "image": "src/assets/dragons-breath.png",
     "altImage": "Art Dragon's Breath",
     "price": 75,
-    "btw": 6,
+    "btw": 0.6,
     "stock": 58,
     "tags": [
       "dragon",
@@ -231,7 +231,7 @@
     "image": "src/assets/forest-guardian.png",
     "altImage": "Art Forest Guardian",
     "price": 40,
-    "btw": 12,
+    "btw": 0.12,
     "stock": 69,
     "tags": [
       "forest",
@@ -247,7 +247,7 @@
     "image": "src/assets/golden-phoenix.png",
     "altImage": "Art Golden Phoenix",
     "price": 80,
-    "btw": 21,
+    "btw": 0.21,
     "stock": 19,
     "tags": [
       "phoenix",
@@ -279,7 +279,7 @@
     "image": "src/assets/frosty-yeti.png",
     "altImage": "Art Frosty Yeti",
     "price": 70,
-    "btw": 6,
+    "btw": 0.6,
     "stock": 8,
     "tags": [
       "yeti",
@@ -295,7 +295,7 @@
     "image": "src/assets/mermaids-song.png",
     "altImage": "Art Mermaid's Song",
     "price": 45,
-    "btw": 12,
+    "btw": 0.12,
     "stock": 94,
     "tags": [
       "mermaid",
@@ -311,7 +311,7 @@
     "image": "src/assets/potion-master.png",
     "altImage": "Art Potion Master",
     "price": 65,
-    "btw": 21,
+    "btw": 0.21,
     "stock": 37,
     "tags": [
       "potion",

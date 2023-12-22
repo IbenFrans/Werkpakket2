@@ -9,7 +9,10 @@ export default {
     ],
     data(){
         return{
-            userStore: useUsersStore()
+            userStore: useUsersStore(),
+            pTotalPrice: "€ ",
+            pTotalBtw: "inc BTW € ",
+            removeButton: "Remove"
         }
     },
     computed: {
@@ -17,11 +20,15 @@ export default {
             return this.item.price * this.item.amount
         },
         totalBtw(){
-            return this.totalPrice + this.totalPrice * 0.21
+            return this.totalPrice + this.totalPrice * this.item.btw
+        },
+        prodcutTitle(){
+            return this.item.titel + " x " + this.item.amount
         }
     },
     methods: {
         removeItem(itemId){
+            console.log(itemId)
             this.userStore.removeItem(itemId)
         },
         changeAmount(item, itemAmount){
@@ -37,16 +44,16 @@ export default {
             <img :src="item.image" :alt="item.altimage"/>
         </div>
         <div class="itemDescription">
-            <h3>{{ item.titel }} x {{ item.amount }}</h3>
+            <h3>{{ prodcutTitle }}</h3>
             <p>{{ item.description }}</p>
             <div class="itemEdit">
                 <div class="itemEditAmount" :class="hide">
                     <input type="number" id="amount" name="quantity" min="1" :max="item.stock" v-model="item.amount">
                 </div>
-                <button :class="hide" class="itemRemove" @click="removeItem(item.id)">Remove</button>
+                <button :class="hide" class="itemRemove" @click="removeItem(item.id)">{{ removeButton }}</button>
                 <div :class="checkout" class="itemPrice">
-                    <p>€ {{ totalPrice }}</p>
-                    <p>inc Btw € {{ totalBtw }}</p>
+                    <p>{{ pTotalPrice }}{{ totalPrice }}</p>
+                    <p>{{ pTotalBtw  }}{{ totalBtw }}</p>
                 </div>
             </div>
         </div>

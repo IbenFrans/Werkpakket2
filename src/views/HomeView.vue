@@ -1,17 +1,17 @@
 <script>
 import HeaderComponent from '@/components/HeaderComponent.vue';
-import PopularProductsComponent from '@/components/PopularProductsComponent.vue';
 import { useProductsStore } from '@/stores/products';
 import ProductCardComponent from '@/components/ProductCardComponent.vue';
 
 export default {
     data(){
         return{
-            productStore: useProductsStore()
+            productStore: useProductsStore(),
+            headerText: "Shneaky Designs!",
+            subText: "Get some awesome prints for an awesome price!",
         }
     },
     components: {
-        PopularProductsComponent,
         ProductCardComponent,
         HeaderComponent
     },
@@ -33,10 +33,7 @@ export default {
 </script>
 
 <template>
-        <header class="headerCenter">
-            <h1>Shneaky Designs!</h1>
-            <p>Get some awesome prints for an awesome price!</p>
-        </header>
+        <HeaderComponent :title="headerText" :subtext="subText"></HeaderComponent>
         <div class="carousel">
         <ul id="producttiles">
         <ProductCardComponent v-for="product in productStore.popularProducts"

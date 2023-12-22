@@ -8,7 +8,9 @@ export default {
         return{
             headerText: "Shopping Cart",
             userStore: useUsersStore(),
-            hide: ""
+            hide: "",
+            pTotalPrice: "Totaalprijs: € ",
+            pTotalBtw: "Totaalprijs (inc Btw): € "
         }
     },
     components:{
@@ -53,8 +55,8 @@ export default {
             v-bind:hide="hide">
         </CartComponent>
         <div class="Totaalprijs">
-            <p>Totaalprijs: € {{ getTotalPrice }}</p>
-            <p>Totaalprijs (inc Btw): € {{ getTotalBtw }}</p>
+            <p>{{ pTotalPrice }}{{ getTotalPrice }}</p>
+            <p>{{ pTotalBtw }}{{ getTotalBtw }}</p>
             <button class="shoppingConfirm" @click="goToCheckOut">Confirm</button>
             
         </div>

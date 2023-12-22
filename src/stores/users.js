@@ -5,6 +5,8 @@ export const useUsersStore = defineStore('users',{
     state: () => ({
        users: usersJson,
        confirmationOverview: [],
+       confirmationTotal: 0,
+       confirmationTotalBtw: 0,
        loggedIn: ""
     }),
     getters:{
@@ -29,7 +31,12 @@ export const useUsersStore = defineStore('users',{
             return totaal
         },
         totalBtw(){
-            return this.totalPrice + this.totalPrice * 0.21
+            let totaal = 0
+            this.shoppingCart.forEach(item => {
+                let totaalItem = item.amount * (item.price + (item.price * item.btw))
+                totaal += totaalItem
+            });
+            return totaal
         }
     },
     actions:{
