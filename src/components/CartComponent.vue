@@ -28,7 +28,6 @@ export default {
     },
     methods: {
         removeItem(itemId){
-            console.log(itemId)
             this.userStore.removeItem(itemId)
         },
         changeAmount(item, itemAmount){
